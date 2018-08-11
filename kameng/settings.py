@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'facility.apps.FacilityConfig',
     'rooms.apps.RoomsConfig',
     'home.apps.HomeConfig',
     'contact.apps.ContactConfig',
