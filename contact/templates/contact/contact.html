@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+    {% load static %}
+
+    <head>
+        <meta charset="UTF-8">
+
+		<title>Staff</title>
+
+        <link rel="stylesheet" href="{% static '/contact/styling.css' %}">
+
+	</head>
+
+
+	<body style="background-color: #000000 ;">
+
+        {% block content %}
+
+            {% for secy in secy_list %}
+
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <p class="name">
+                                {{ secy.name }}
+                            </p>
+                        </div>
+
+                        <div class="back">
+                            <p>
+                                <p class="name">{{ secy.name }}</p>
+                                <p class="text">{{ secy.designation }}</p>
+                                <img src="{% static '/contact/logos/logo-general.png' %}" width=80px>
+                                <br>
+                                Contact : {{ secy.phone }}
+                                <br>
+                                Mail 	: {{ secy.mail }}
+                                <br>
+                                Room No : {{ secy.room }}
+                                <br>
+                                <a href="https://www.facebook.com/ram.gupta.507679"><img src="{% static "/contact/logos/logo-facebook.png" %}" width=50px></a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+		    {% endfor %}
+
+		{% endblock %}
+
+	</body>
+
+</html>

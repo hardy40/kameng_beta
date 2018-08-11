@@ -1,0 +1,54 @@
+.heading{
+	text-transform: uppercase;
+	word-spacing: 5px;
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-style: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: white;
+}
+
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table{
+	border: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #393939;
+	color: #00AD5F;
+	table-layout: auto;
+	width: 60%;
+}
+
+tr,td{
+	border: 0px solid #676767;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#table-head{
+	background-color: #404040;
+	color: 999999;
+	text-transform: uppercase;
+	height: 40px;
+}
+
+#row{
+	height: 30px;
+	background-color: #212529 ;
+	color: #808080;
+}
+
+#row:hover {
+	background-color: #909090;
+	color: white;
+}
+
+#l{
+	padding-left: 10px;
+}

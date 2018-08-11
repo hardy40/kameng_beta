@@ -1,0 +1,73 @@
+.flip-container {
+	perspective: 1000px;
+    margin: 60px ;
+    float: left;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 325px ;
+    height: 420px ;
+    border-radius: 10px ;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+    border: 2px solid black ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    backface-visibility: hidden;
+    background-color: white ;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    text-align: center ;
+    line-height: 2 ;
+}
+
+.text{
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    font-weight: 400;
+    letter-spacing: 1px ;
+    line-height: 1.5 ;
+    text-align: center ;
+    color: #666 ;
+}
+
+.image{
+    width: 60% ;
+    border-radius: 50% ;
+}
+
+.heading{
+    text-align: center ;
+    text-transform: uppercase ;
+    letter-spacing: 3px ;
+    word-spacing: 10px ;
+}
+
+.name{
+    text-align: center ;
+    font-size: 24px ;
+    letter-spacing: 1px ;
+    word-spacing: 3px ;
+    font-weight: bold;
+}

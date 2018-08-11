@@ -1,0 +1,72 @@
+body, html{
+    height: 100%;
+    margin:0;
+    font-size: 16px;
+    font-weight:400;
+    font-family: "Lato" sans-serif;
+    line-height: 1.8em;
+    color:#666;
+}
+
+.img1,.img2{
+    position: relative;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-attachment: fixed;
+}
+
+.img1{
+            background-image: url('images/img.jpg');
+            min-height: 100%;
+        }
+
+.img2{
+    background-image: url('images/night.jpg');
+    min-height: 100%;
+}
+
+
+
+.drop{
+	margin-top:20px;
+	margin-left:20px;
+	background:transparent;
+	border:transparent;
+	border-radius:5px;
+	position:relative;
+	display:inline-box;
+}
+
+.drop:hover ul li{
+	display:block;
+	
+}
+
+ul li {
+	display:none;
+	
+	
+}
+
+
+.section{
+    text-align: center;
+    background-color: #282e34;
+    padding : 50px 90px;
+}
+
+.ptxt{
+    position: absolute;
+    
+    top:30%;
+    
+    width:100%;
+    text-align: center;
+    color:#000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
