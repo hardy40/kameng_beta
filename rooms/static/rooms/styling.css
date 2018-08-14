@@ -1,4 +1,4 @@
-.heading{
+.headingRoom{
 	text-transform: uppercase;
 	word-spacing: 5px;
 	letter-spacing: 2px;
@@ -16,7 +16,7 @@ table{
 	width: 100%;
 }
 
-.table{
+.tableRoom {
 	border: 0px;
 	margin-right: auto;
 	margin-left: auto;

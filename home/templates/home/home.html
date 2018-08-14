@@ -2,24 +2,35 @@
 <html>
 
 <head>
-    <title>Kameng Hostel|IITG</title>
+    <title>Kameng Hostel | IITG</title>
     {% load static %}
     <link  rel='stylesheet'  href= "{% static '/home/style.css' %}" >
 
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
 
 <body>
     <div class ="img1">
-		<button class="drop">
-			<img src="{% static '/home/images/icon_menu.png' %}" width=35px height=25px>
-			<ul>
-				<li>Contact Us</li>
-				<li> Gallery </li>			
-				</ul>
-		</button>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/home" style="letter-spacing: 5px;">KAMENG HOSTEL</a>
+            </div>
+            <div style="float: right;">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="/home">Home</a></li>
+                  <li><a href="/rooms">Rooms</a></li>
+                  <li><a href="/contact">Staff</a></li>
+                  <li><a href="/facility">Facilities</a></li>
+                </ul>
+            </div>
+          </div>
+        </nav>
         <div class = "ptxt">
             <span class="border">
                 Kameng Hostel
@@ -27,9 +38,9 @@
         </div>
     </div>
 
-    <section class = "section section-l">
-        <h2> About Us </h2>
-            <p>
+    <section class = "sectionHome">
+        <h2 style="color: white;"> About Us </h2>
+            <p style="color: white;">
                 Kameng Hostel is named after the tributary Kameng of the mighty river Bramhaputra. Kameng has 504 rooms distributed over five blocks(B1,B2,B3,B4 and C1).The B blocks have 30 rooms on each floor while the C1 block has eight rooms on each floor. Kameng has excellent canteens so you never run out of food,snacks,cold drinks,ice-creams and of course tea and coffee(the Key components in an IITians diet)which incidentally is open till 3AM.The dining here is said to be the best on the entire campus. Kameng also has a juice center in the mess which serves friut juice,milk shakes and fruit salads.There is also a stationary shop inside the hostel where you can get all your daily needs. Our common room doubles up as a T.V room where it gets hot during Indian and English Premier Leagues. Kameng has a sports room where the Kamengites can avail all the sport facilites like issuing sporting goods,playing table tennis,carrom,chess and other board games.
             </p>
     </section>

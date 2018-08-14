@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <head>
     {% load static %}
     <title>Facility</title>
     <link rel="stylesheet" type="text/css" href="{% static '/facility/style.css' %}">
-    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-        <div class="container">
+        <div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/home" style="letter-spacing: 5px;">KAMENG HOSTEL</a>
+            </div>
+            <div style="float: right;">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="/home">Home</a></li>
+                  <li><a href="/rooms">Rooms</a></li>
+                  <li><a href="/contact">Staff</a></li>
+                  <li><a href="/facility">Facilities</a></li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        </div>
+        <div class="containerFac">
 
                 <!-- Full-width images with number text -->
                 <div class="mySlides">

@@ -16,7 +16,7 @@ body, html {
   }
   
   /* Position the image container (needed to position the left and right arrows) */
-  .container {
+  .containerFac {
     position: relative;
     height: 100%;
     margin: 0%;
