@@ -11,7 +11,6 @@
 .flip-container, .front, .back {
     width: 325px ;
     height: 420px ;
-    border-radius: 10px ;
 }
 
 .flipper {
@@ -22,11 +21,10 @@
 }
 
 .front, .back {
-    border: 2px solid black ;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid #43516C ;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
     backface-visibility: hidden;
-    background-color: white ;
-
+    background-color:white ;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -35,6 +33,7 @@
 .front {
 	z-index: 2;
 	transform: rotateY(0deg);
+
 }
 
 .back {

@@ -5,5 +5,6 @@ app_name = 'rooms'
 
 urlpatterns = [
     path('', views.rooms, name='rooms'),
-    #path('/<int:rollnum>', views.roll, name='Roll'),
+    path('search/', views.roll, name='roll'),
+    path('add/', views.add_kamengite, name='add'),
 ]

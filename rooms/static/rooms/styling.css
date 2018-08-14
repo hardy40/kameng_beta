@@ -1,4 +1,4 @@
-.heading{
+.headingRoom{
 	text-transform: uppercase;
 	word-spacing: 5px;
 	letter-spacing: 2px;
@@ -7,7 +7,8 @@
 	text-align: center;
 	margin-top: 50px;
 	margin-bottom: 50px;
-	color: white;
+	color: #00AD5F;
+    font-weight: bold;
 }
 
 table{
@@ -15,7 +16,7 @@ table{
 	width: 100%;
 }
 
-.table{
+.tableRoom {
 	border: 0px;
 	margin-right: auto;
 	margin-left: auto;
@@ -33,7 +34,7 @@ tr,td{
 
 #table-head{
 	background-color: #404040;
-	color: 999999;
+	color: #00AD5F;
 	text-transform: uppercase;
 	height: 40px;
 }
