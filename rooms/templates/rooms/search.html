@@ -1,15 +1,107 @@
 <!DOCTYPE html>
-<html>
+<>
 
 <head>
 	<title>Room Allotment</title>
     {% load static %}
-	<link rel="stylesheet" type="text/css" href="{% static '/rooms/styling.css' %}">
+{#	<link rel="stylesheet" type="text/css" href="{% static '/rooms/stylingRoom.css' %}">#}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+     .trtr{
+        border: 0 solid #676767;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .tdtd{
+        border: 0 solid #676767;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    body{
+	    background-color:#676767;
+    }
+
+    .headingRoom{
+        text-transform: uppercase;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        font-size: 20px;
+        font-style: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: #00AD5F;
+        font-weight: bold;
+    }
+
+    table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .tableRoom {
+        border: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: #393939;
+        color: #00AD5F;
+        table-layout: auto;
+        width: 60%;
+    }
+
+
+
+    #table-head{
+        background-color: #404040;
+        color: #00AD5F;
+        text-transform: uppercase;
+        height: 40px;
+    }
+
+    #row{
+        height: 30px;
+        background-color: #212529 ;
+        color: #808080;
+    }
+
+    #row:hover {
+        background-color: #909090;
+        color: white;
+    }
+
+</style>
+
+
 </head>
 
-<body bgcolor="#676767">
+<body>
+     <div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/home" style="letter-spacing: 5px;">KAMENG HOSTEL</a>
+                </div>
+                <div style="float: right;">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/home">Home</a></li>
+                        <li><a href="/rooms">Rooms</a></li>
+                        <li><a href="/contact">Staff</a></li>
+                        <li><a href="/facility">Facilities</a></li>
+                        <li><a href="/complaints">Complaints</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 	{% block content %}
-		<div class="heading">
+		<div class="headingRoom">
 			Room allotment list
 		</div>
 {#      <form action="/rooms/{{ Roll }}" method="get" style="margin-left: 270px; margin-bottom: 50px; margin-top: 50px;">#}
@@ -18,19 +110,19 @@
 {#			<input type="text" name="Room" style="margin-left: 30px;" placeholder="{{ kamengite.room }}">#}
 {#			<input type="submit" value="Search">#}
 {#		</form>#}
-		<div class="table">
+		<div class="tableRoom">
 			<table align="center">
-				<tr id="table-head">
-					<th align="left" style="padding-left: 80px;">Name</th>
-					<th>Roll No.</th>
-					<th>Room Alloted</th>
+				<tr class = "trtr" id="table-head">
+					<th class="thth" align="left" style="padding-left: 80px;">Name</th>
+					<th class="thth">Roll No.</th>
+					<th class="thth">Room Alloted</th>
 				</tr>
 
                 {% for student in result %}
-                    <tr id="row">
-                        <td style="text-align: left; padding-left: 10px;">{{ student.name }}</td>
-                        <td>{{ student.roll_no }}</td>
-                        <td>{{ student.room }}</td>
+                    <tr class="trtr" id="row">
+                        <td class="tdtd" style="text-align: left; padding-left: 10px;">{{ student.user.first_name }} {{ student.user.last_name }}</td>
+                        <td class="tdtd">{{ student.roll }}</td>
+                        <td class="tdtd">{{ student.room }}</td>
                     </tr>
                 {% endfor %}
 			</table>

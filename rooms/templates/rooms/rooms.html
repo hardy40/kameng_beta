@@ -4,7 +4,7 @@
 <head>
 	<title>Room Allotment</title>
     {% load static %}
-	<link rel="stylesheet" type="text/css" href="{% static '/rooms/styling.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/rooms/stylingRoom.css' %}">
 
 {#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
 {#        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
@@ -61,8 +61,8 @@
 
 				{% for kamengite in kamengites %}
 					<tr id="row">
-						<td style="text-align: left; padding-left: 10px;">{{ kamengite.name }}</td>
-						<td>{{ kamengite.roll_no }}</td>
+						<td style="text-align: left; padding-left: 10px;">{{ kamengite.user.first_name}}   {{ kamengite.user.last_name }}</td>
+						<td>{{ kamengite.roll }}</td>
 						<td>{{ kamengite.room }}</td>
 					</tr>
 				{% endfor %}

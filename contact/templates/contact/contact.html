@@ -1,66 +1,71 @@
 
-<!DOCTYPE html>
-<html>
-    {% load static %}
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#    {% load static %}#}
+{##}
+{#    <head>#}
+{#        <meta charset="UTF-8">#}
+{##}
+{#		<title>Staff</title>#}
+{##}
+{#        <link rel="stylesheet" href="{% static '/contact/stylingRoom.css' %}">#}
+{##}
+{#        <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
+{#        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
+{#        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+{##}
+{#	</head>#}
+{##}
 
-    <head>
-        <meta charset="UTF-8">
-
-		<title>Staff</title>
-
-        <link rel="stylesheet" href="{% static '/contact/styling.css' %}">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	</head>
-
-
-	<body style="background-color: #43516C ;">
-
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="/home" style="letter-spacing: 5px;">KAMENG HOSTEL</a>
-            </div>
-            <div style="float: right;">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="/home">Home</a></li>
-                  <li><a href="/rooms">Rooms</a></li>
-                  <li><a href="/contact">Staff</a></li>
-                  <li><a href="/facility">Facilities</a></li>
-                </ul>
-            </div>
-          </div>
-        </nav>
-
+{#	<body style="background-color: #43516C ;">#}
+{##}
+{#        <nav class="navbar navbar-inverse navbar-fixed-top">#}
+{#            <div class="container-fluid">#}
+{#            <div class="navbar-header">#}
+{#              <a class="navbar-brand" href="/home" style="letter-spacing: 5px;">KAMENG HOSTEL</a>#}
+{#            </div>#}
+{#            <div style="float: right;">#}
+{#                <ul class="nav navbar-nav">#}
+{#                  <li class="active"><a href="/home">Home</a></li>#}
+{#                  <li><a href="/rooms">Rooms</a></li>#}
+{#                  <li><a href="/contact">Staff</a></li>#}
+{#                  <li><a href="/facility">Facilities</a></li>#}
+{#                </ul>#}
+{#            </div>#}
+{#          </div>#}
+{#        </nav>#}
+        {% extends "base.html" %}
+{#        {% include head.html %}#}
+        {% block include %}
+                {% include "head.html" %}
+        {% endblock %}
+        {% block content %}
+            {% load static %}
         <br><br><br><br>
 
-        {% block content %}
 
-            {% for secy in secy_list %}
+            {% for s in secy_list %}
 
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                     <div class="flipper">
                         <div class="front">
                             <p class="name">
-                                {{ secy.name }}
+                                {{ s.secy.user.first_name }} {{ s.secy.user.last_name }}
                             </p>
                         </div>
 
                         <div class="back">
                             <p>
-                                <p class="name">{{ secy.name }}</p>
-                                <p class="text">{{ secy.designation }}</p>
+                                <p class="name">{{ s.secy.user.first_name }} {{ s.secy.user.last_name }}</p>
+                                <p class="text">{{ s.position }}</p>
                                 <img src="{% static '/contact/logos/logo-general.png' %}" width=80px>
+{#                                <br>#}
+{#                                Contact : {{ secy.phone }}#}
                                 <br>
-                                Contact : {{ secy.phone }}
+                                Mail 	: {{ s.secy.user.email }}
                                 <br>
-                                Mail 	: {{ secy.mail }}
-                                <br>
-                                Room No : {{ secy.room }}
+                                Room No : {{ s.secy.room }}
                                 <br>
                                 <a href="https://www.facebook.com/ram.gupta.507679"><img src="{% static "/contact/logos/logo-facebook.png" %}" width=50px></a>
                             </p>
@@ -72,7 +77,7 @@
 		    {% endfor %}
 
 		{% endblock %}
-
-	</body>
-
-</html>
+{##}
+{#	</body>#}
+{##}
+{#</html>#}
