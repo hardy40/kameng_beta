@@ -1,0 +1,51 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#</head>#}
+{#<body>#}
+{#    <p>Complaints Page.</p>#}
+
+{% extends "base.html" %}
+{% block title %}Complaints{% endblock %}
+    <br><br><br><br>
+    {% block content %}
+        <div style="margin:100px">
+        <form action="submit/" method="post">
+            {% csrf_token %}
+            <div>
+            <input type="text" name="txt" placeholder="Complaint">
+            </div>
+            <br>
+            <select name="toc">
+                <option value="Sports">Sports</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Mess">Mess</option>
+            </select>
+            <br>
+            <div>
+            <input type="checkbox" name="stud" value="1">
+            </div>
+            <br>
+{#            {{ form.as_p }}#}
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+        {% for complaint in complaints %}
+            <p>{{ complaint.complaintText }}</p>
+            <p>{{ complaint.type_of_complaint }}</p>
+            <p>
+                {% if complaint.is_resolved_stud %}
+                    <p>Complaint Solved!</p>
+                {% else %}
+                    <p>Under Progress</p>
+                {% endif %}
+            </p>
+            <br>
+
+        {% endfor %}
+        <a href="{% url 'logout' %}">logout</a>
+    {% endblock %}
+{#</body>#}
+{#</html>#}

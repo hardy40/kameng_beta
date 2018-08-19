@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block content %}
+        {% for c in c_list %}
+            <p>   {{  c.complaintText }}   </p>
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>

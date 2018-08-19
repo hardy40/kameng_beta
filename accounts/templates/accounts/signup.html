@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+
+body{
+
+padding:0;
+margin:0;
+background-color:purple;
+
+
+}
+
+.WhiteBox{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:900px;
+height:650px;
+color:white;
+background-color: white;
+border-radius:10px;
+
+}
+
+.WhiteBox .first,
+.WhiteBox .login
+{
+position:relative;
+width:50%;
+height:650px;
+float:left;
+box-sizing=border-box;
+}
+
+.WhiteBox .login{
+
+	
+	
+
+}
+.login input{
+	
+	width=100%;
+	margin-bottom:20px;
+}
+h2{
+color:black;
+align:center;
+padding-top:130px;
+padding-left:140px;
+padding-right:80px;
+font-family:Courier;
+}
+.login form{
+	
+	padding-top:20px;
+	padding-left:50px;
+	padding-right:50px;
+	padding-bottom:50px;
+	
+}
+.WhiteBox .login input{
+
+	display:block;
+	width:70%;
+	padding:10px;
+	box-sizing=border-box;
+	margin-bottom=20px;
+	border:2px solid #ccc;
+	border-radius:25px;
+	outline:none;
+	background:#ccc;
+	font-family:Courier;
+
+}
+.WhiteBox .login input:hover{
+	border:2px solid #673ab7;
+}
+.WhiteBox .login input[type="submit"]{
+border:2px solid green;
+background:green;
+}
+.WhiteBox .login input[type="submit"]:hover{
+border:2px solid #800000;
+background:#800000;
+}
+.first img{
+
+padding-top:150px;
+padding-left:80px;
+
+
+}
+</style>
+
+</head>
+<body>
+	
+
+	<div class = "WhiteBox">
+		
+		<div class="first">
+			<img src="/templates/registration/images/img-01.png" alt="IMG">
+		</div>
+		
+		<div class="login">
+			<h2>Log In</h2>
+			<form action="signup_add/" method="post">
+                <div>
+				<input type="text" name="first_name" placeholder="First Name">
+				</div>
+                <div>
+				<input type="text" name="last_name" placeholder="Last Name">
+				</div>
+                <div>
+				<input type="text" name="email" placeholder="Webmail">
+				</div>
+                <div>
+				<input type="text" name="roll" placeholder="Roll No">
+				</div>
+                <div>
+				<input type="text" name="room" placeholder="Room No">
+				</div>
+				<div>
+				<input type="text" name="username" placeholder="Username">
+				</div>
+				<div>
+				<input type="password" name="password" placeholder="Password">
+				</div>
+                <div>
+
+				<input type="password" name="password2" placeholder="Password(again)">
+				</div>
+				<div>
+
+                {% csrf_token %}
+                {{ form.as_p }}
+
+				<input type="submit" name="" value = "Log In">
+				</div>
+			</form>
+		
+		
+		</div>
+		
+		
+	</div>	
+
+	
+
+
+</body>
+</html>
