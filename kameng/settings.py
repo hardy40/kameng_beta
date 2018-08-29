@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'mess_menu.apps.MessMenuConfig',
     'complaints.apps.ComplaintsConfig',
     'facility.apps.FacilityConfig',
     'rooms.apps.RoomsConfig',
