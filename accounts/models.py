@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class KamengitesOrg(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, unique=True, primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     roll = models.IntegerField()
     room = models.CharField(max_length=6)
     # phone = models.IntegerField()
