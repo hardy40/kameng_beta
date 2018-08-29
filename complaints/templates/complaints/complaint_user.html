@@ -1,38 +1,45 @@
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#</head>#}
-{#<body>#}
-{#    <p>Complaints Page.</p>#}
 
 {% extends "base.html" %}
 {% block title %}Complaints{% endblock %}
+    {% block include %}
+                {% include "head_complaints.html" %}
+        {% endblock %}
     <br><br><br><br>
+
     {% block content %}
-        <div style="margin:100px">
+    <div class="comMainDiv">
+    <div class="compForm">
         <form action="submit/" method="post">
             {% csrf_token %}
-            <div>
-            <input type="text" name="txt" placeholder="Complaint">
-            </div>
-            <br>
-            <select name="toc">
+
+           <div class="typeOfComp">
+            Type Of Complaint:
+
+               <select name="toc" class="comSelect">
                 <option value="Sports">Sports</option>
                 <option value="Maintenance">Maintenance</option>
                 <option value="Cultural">Cultural</option>
                 <option value="Mess">Mess</option>
             </select>
+           </div>
             <br>
+            <div class="complaintBox">
+               Complaint:
+             </div>
+
             <div>
-            <input type="checkbox" name="stud" value="1">
+            <textarea class="comInput" rows="4" cols="50" name="txt"> </textarea>
             </div>
+
             <br>
-{#            {{ form.as_p }}#}
-            <input type="submit" value="Submit">
+
+            <input class="comSubmit" type="submit" value="Submit">
         </form>
         </div>
+        <br>
+        <!--<h3> Your Complaints </h3>-->
         {% for complaint in complaints %}
+        <section class="complaintSection">
             <p>{{ complaint.complaintText }}</p>
             <p>{{ complaint.type_of_complaint }}</p>
             <p>
@@ -42,10 +49,9 @@
                     <p>Under Progress</p>
                 {% endif %}
             </p>
-            <br>
-
-        {% endfor %}
+        </section>
+        {% endfor %} 
         <a href="{% url 'logout' %}">logout</a>
-    {% endblock %}
-{#</body>#}
-{#</html>#}
+        </div>
+
+        {% endblock %}

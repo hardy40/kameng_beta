@@ -1,0 +1,68 @@
+html,body{
+    margin : 0px;
+    background-color: #1A1A1D;
+}
+.complaintSection{
+    margin-right 10px;
+    background-color: #1A1A1D;
+    padding : 50px 90px;
+    color:#88BDBC;
+    border:2px solid black;
+    padding:30px;
+
+}
+
+.compForm{
+    background-color: #1A1A1D;
+    margin-top:100px;
+    margin-left 100px;
+
+}
+.complaintBox ,.typeOfComp{
+    color:#FF6347;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.complaintBox{
+    margin-left:80px;
+    font-size:40px;
+}
+
+.typeOfComp{
+    margin-left :748px;
+}
+
+.comInput{
+    height:300px;
+    width :1000px;
+    color:gray;
+    text-align:top;
+    margin-left : 80px;
+    font-style:italic;
+    font-size:16px;
+    background-color:#303030;
+    border:none;
+    padding:10px;
+
+}
+.comSelect{
+    color:#88BDBC;
+    background-color:#191919;
+    border-color:black;
+}
+
+.comSubmit{
+    border-color:black;
+    color:#FF6347;
+    background-color:#191919;
+    margin-left:930px;
+    height:50px;
+    width:150px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.comMainDiv{
+    background-color:#1A1A1D;
+}
