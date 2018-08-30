@@ -25,4 +25,5 @@ urlpatterns = [
     path('signup/', include('accounts.urls')),
     path('complaints/', include('complaints.urls')),
     path('', include('django.contrib.auth.urls')),
+    path('mess/', include('mess_menu.urls')),
 ]
