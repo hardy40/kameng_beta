@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MESS MENU</title>
+	<link rel="stylesheet" href="mess_menu_style.css">
+</head>
+<body>
+	<!-- {% extends base.html %} -->
+	<!-- {% block content %} -->
+	    <!-- {% load static %} -->
+		<div>
+			<form>
+				<table class="messTable">
+					<tr class="messTableHeadRow">
+					<th></th>
+	<!-- {#		{% for t in Time %}#} -->
+					<th class="messTableHeadData">
+						<!-- {{ t }} -->
+						TESTING
+					</th>
+					</tr>
+	<!-- {#		{% endfor %}#} -->
+
+	<!-- {#		{% for d in Day %}#} -->
+				<tr>
+				<td class="messDay">
+					<!-- {{ d }} -->
+					MONDAY
+				</td>
+	<!-- {#				{% for t in Time %}#} -->
+				<td class="messOption">
+					<div class="messItem">
+					Item 1 :
+					</div>
+
+					<select class="messDropdown">
+					    <option value="x">--None--</option>
+						<!-- {% i = 0 %} -->
+	<!-- {#				{% for option in mess_option %}#} -->
+					    <option value="{{ i }}">option</option>
+	<!-- {#				{% endfor %}#} -->
+					</select>
+					<br><br>
+					<div class="messItem">
+					Item 2 :
+					</div>
+					<select class="messDropdown">
+					    <option value="x">--None--</option>
+						<!-- {% i = 0 %} -->
+	<!-- {#				{% for option in mess_option %}#} -->
+					    <option value="{{ i }}">option</option>
+	<!-- {#				{% endfor %}#} -->
+					</select>
+					<br><br>
+					<div class="messItem">
+					Item 3 :
+					</div>
+					<select class="messDropdown">
+					    <option value="x">--None--</option>
+						<!-- {% i = 0 %} -->
+	<!-- {#				{% for option in mess_option %}#} -->
+					    <option value="{{ i }}">option</option>
+	<!-- {#				{% endfor %}#} -->
+					</select>
+				</td>
+	<!-- {#				{% endfor %}#} -->
+	<!-- {#		{% endfor %}#} -->
+				</tr>
+				</table>
+				<div class="messButtonDiv">
+					<input type="submit" name="submit" class="messButton">
+				</div>
+			</form>
+		</div>
+	<!-- {% endblock %}-->
+</body>
+</html>
