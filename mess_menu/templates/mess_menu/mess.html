@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="submitted/" method="post">
+            {% csrf_token %}
+            {% block content %}
+           <div class="typeOfComp">
+
+                {% for m in menu_obj_list %}
+                    {{m}}
+               <select name="{{ m }}" class="comSelect">
+                   {% for o in m.options.all %}
+                        <option value={{o.value}}>{{o.value}}</option>
+                   {% endfor %}
+               </select>
+
+
+                {% endfor %}
+
+           </div>
+            {% endblock %}
+
+            <input class="comSubmit" type="submit" value="Submit">
+        </form>
+</body>
+</html>
