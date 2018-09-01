@@ -32,10 +32,10 @@
 
 	{% block content %}
 		<div class="headingRoom">
-			Room allotment list
+            <a href="/rooms">Room allotment list</a>
 		</div>
 
-        <form action="search/" method="post" style="margin-left: 270px; margin-bottom: 50px; margin-top: 50px;">
+        <form action="" method="post" style="margin-left: 270px; margin-bottom: 50px; margin-top: 50px;">
             {% csrf_token %}
 			<input type="text" name="Name" placeholder="Name">
 			<input type="text" name="Roll" style="margin-left: 30px;" placeholder="Roll No">
@@ -43,13 +43,13 @@
 			<input type="submit" value="Search">
 		</form>
 
-        <form action="add/" method="post" style="margin-left: 270px; margin-bottom: 50px; margin-top: 50px;">
-            {% csrf_token %}
-			<input type="text" name="Name" placeholder="Name">
-			<input type="text" name="Roll" style="margin-left: 30px;" placeholder="Roll No">
-			<input type="text" name="Room" style="margin-left: 30px;" placeholder="Room No">
-			<input type="submit" value="Add">
-		</form>
+{#        <form action="add/" method="post" style="margin-left: 270px; margin-bottom: 50px; margin-top: 50px;">#}
+{#            {% csrf_token %}#}
+{#			<input type="text" name="Name" placeholder="Name">#}
+{#			<input type="text" name="Roll" style="margin-left: 30px;" placeholder="Roll No">#}
+{#			<input type="text" name="Room" style="margin-left: 30px;" placeholder="Room No">#}
+{#			<input type="submit" value="Add">#}
+{#		</form>#}
 
 		<div class="tableRoom">
 			<table align="center">

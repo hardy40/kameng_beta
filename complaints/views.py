@@ -15,20 +15,20 @@ def complaint(request):
 
 
 def submit_complaint(request):
-    # if request.user.is_authenticated():
-    if request.method == 'POST':
-        c = Complaint()
-        k = KamengitesOrg.objects.filter(user=request.user)
-        c.u = k[0]
-        c.complaintText = request.POST.get('txt')
-        c.type_of_complaint = request.POST.get('toc')
-        temp = request.POST.getlist('stud')
-        if len(temp):
-            c.is_resolved_stud = True
-        else:
-            c.is_resolved_stud = False
-        c.save()
-        return HttpResponseRedirect('/complaints')
+    # if request.user.is_authenticated:
+        if request.method == 'POST':
+            c = Complaint()
+            k = KamengitesOrg.objects.filter(user=request.user)
+            c.u = k[0]
+            c.complaintText = request.POST.get('txt')
+            c.type_of_complaint = request.POST.get('toc')
+            temp = request.POST.getlist('stud')
+            if len(temp):
+                c.is_resolved_stud = True
+            else:
+                c.is_resolved_stud = False
+            c.save()
+            return HttpResponseRedirect('/complaints')
 
 
 def secy_complaint(request):

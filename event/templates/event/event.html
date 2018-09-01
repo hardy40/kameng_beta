@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <br><br><br><br><br>
+
+    {% for post in post_list %}
+    <div style="width: 40% ; margin-left: 30%; margin-right: 30%; border: 2px solid black; padding: 5px" >
+        <p style="padding: 2px; margin: 0">text</p>
+        <hr style="margin-top: 0; padding: 0; margin-bottom: 5px; height: 2px; background-color: black;">
+        {% if post.img %}
+            <img src="{{ post.img.url }}" width="100%">
+            <hr style="margin-bottom: 0; padding: 0; margin-top: 5px;  height: 2px; background-color: black;">
+        {% endif %}
+        <p style="margin-top: 0" >{{ post.post }}</p>
+    </div><br><br>
+    {% endfor %}
+{% endblock %}

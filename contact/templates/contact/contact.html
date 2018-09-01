@@ -42,10 +42,10 @@
         {% endblock %}
         {% block content %}
             {% load static %}
+            {% get_static_prefix as STATIC_URL %}
         <br><br><br><br>
-
-
             {% for s in secy_list %}
+                {% with 'contact/logos/logo-'|add:s.position|add:'.png' as myImg %}
 
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                     <div class="flipper">
@@ -59,7 +59,7 @@
                             <p>
                                 <p class="name">{{ s.secy.user.first_name }} {{ s.secy.user.last_name }}</p>
                                 <p class="text">{{ s.position }}</p>
-                                <img src="{% static '/contact/logos/logo-general.png' %}" width=80px>
+                                <img src="{{ STATIC_URL }}{{ myImg }}" width=80px>
 {#                                <br>#}
 {#                                Contact : {{ secy.phone }}#}
                                 <br>
@@ -73,7 +73,7 @@
 
                     </div>
                 </div>
-
+                {% endwith %}
 		    {% endfor %}
 
 		{% endblock %}

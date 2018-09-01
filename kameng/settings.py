@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'event.apps.EventConfig',
     'mess_menu.apps.MessMenuConfig',
     'complaints.apps.ComplaintsConfig',
     'facility.apps.FacilityConfig',
@@ -127,3 +128,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/home/'
 LOGOUT_REDIRECT_URL = '/login/'
+
+#
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

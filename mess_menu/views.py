@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-=======
 from django.shortcuts import render, HttpResponseRedirect
 from accounts.models import KamengitesOrg, Secy
 from .models import MessData, MenuObj, Option
@@ -31,4 +28,3 @@ def submitted(request):
                     o.save()
         r.save()
         return render(request, 'mess_menu/Submitted.html')
->>>>>>> 484bbc5d462fd7617ccf9164567e3d25ae8e6717
