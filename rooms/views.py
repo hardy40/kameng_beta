@@ -6,7 +6,8 @@ from accounts.models import KamengitesOrg
 
 def rooms(request):
     kamengites = KamengitesOrg.objects.all()
-    context = {'kamengites': kamengites}
+    m = KamengitesOrg.objects.filter(user=request.user)
+    context = {'kamengites': kamengites, 'cur_user': m[0]}
     return render(request, 'rooms/rooms.html', context)
 
 
