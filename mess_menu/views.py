@@ -8,7 +8,8 @@ def mess_response(request):
         menu_obj_list = MenuObj.objects.all()
         time_list = Time.objects.all()
         day_list = Day.objects.all()
-        context = {'menu_obj_list': menu_obj_list, 'time_list': time_list, 'day_list': day_list}
+        i = 0
+        context = {'menu_obj_list': menu_obj_list, 'time_list': time_list, 'day_list': day_list,'i':i}
         return render(request, 'mess_menu/mess.html', context)
     else:
         return HttpResponseRedirect('/login')

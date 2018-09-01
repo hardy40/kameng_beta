@@ -1,78 +1,81 @@
 table, th, td {
-    border: 1px solid black;
+    border: 2px solid silver;
     border-collapse: collapse;
 }
 
 
-/*.messTable{*/
-	/*border: 2px dashed black;*/
-	/*margin: 0 auto;*/
-/*}*/
+.messTable{
+	border: 2px dashed black;
+	margin: 0 auto;
+}
 
-/*.messDay{*/
-	/*color: #303030 ;*/
-	/*font-size: 20px ;*/
-	/*font-weight: bold;*/
-	/*padding: 20px;*/
-	/*padding-bottom: 5px ;*/
-/*}*/
+.messDay{
+	color: silver;
+	font-size: 20px ;
+	font-weight: bold;
+	padding: 20px;
+	padding-bottom: 5px ;
+}
 
-/*.messTableHeadRow{*/
-	/*color: #17252A ;*/
-/*}*/
+.messTableHeadRow{
+	color: silver ;
+}
 
-/*.messTableHeadData{*/
-	/*font-size: 22px ;*/
-	/*font-weight: bolder;*/
-	/*text-align: center;*/
-	/*padding: 20px ;*/
-	/*padding-top: 5px ;*/
-	/*padding-bottom: 5px;*/
-/*}*/
+.messTableHeadData{
+	font-size: 22px ;
+	font-weight: bolder;
+	text-align: center;
+	padding: 20px ;
+	padding-top: 5px ;
+	padding-bottom: 5px;
+}
 
-/*.messItem{*/
-	/*float:left;*/
-	/*vertical-align: center;*/
-	/*padding: 7px ;*/
-/*}*/
+.messItem{
+	float:left;
+	vertical-align: center;
+	padding: 7px ;
+    color: black    ;
+}
 
-/*.messDropdown{*/
-	/*background-color: DodgerBlue ;*/
-	/*border: none ;*/
-	/*height: 30px ;*/
-	/*width: 200px ;*/
-	/*padding: 5px ;*/
-	/*font-size: 16px ;*/
-	/*float: left;*/
-/*}*/
+.messDropdown{
+	background-color: DodgerBlue ;
+	border: none ;
+	height: 30px ;
+	width: 200px ;
+	padding: 5px ;
+	font-size: 16px ;
+	float: left;
+}
 
-/*.messOption{*/
-	/*text-align: center;*/
-	/*padding: 20px ;*/
-	/*padding-bottom: 10px ;*/
-/*}*/
+.messOption{
+	text-align: center;
+	padding: 20px ;
+	padding-bottom: 10px ;
+}
 
-/*body{*/
-	/*background-color: #2B7A78 ;*/
-/*}*/
+body{
+	background-color: #2B7A78 ;
+}
 
-/*.messButton {*/
-    /*background-color: #4CAF50; !* Green *!*/
-    /*border: none;*/
-    /*color: white;*/
-    /*padding: 15px 32px;*/
-    /*text-align: center;*/
-    /*text-decoration: none;*/
-    /*display: inline-block;*/
-    /*font-size: 16px;*/
-    /*text-transform: uppercase;*/
-    /*float: right;*/
-    /*margin: 20px;*/
-/*}*/
+.messButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    float: right;
+    margin: 20px;
+}
 
-/*.messButtonDiv{*/
-	/*width:80%;*/
-/*}*/
+.messButtonDiv{
+	width:100%;
+    margin-right: 0;
+    padding-right: 0;
+}
 
 
 

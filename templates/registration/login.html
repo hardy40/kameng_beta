@@ -13,7 +13,7 @@
 body{
 padding:0;
 margin:0;
-background-color:purple;
+background-color:#303003;
 }
 .WhiteBox{
 position:absolute;
@@ -23,7 +23,7 @@ transform:translate(-50%,-50%);
 width:900px;
 height:650px;
 color:white;
-background-color: white;
+background-color: #808080;
 border-radius:10px;
 }
 .WhiteBox .first,
@@ -46,7 +46,7 @@ box-sizing=border-box;
 }
 h2{
 color:black;
-align:center;
+{#text-align:center;#}
 padding-top:130px;
 padding-left:140px;
 padding-right:80px;
@@ -69,7 +69,7 @@ font-family:Courier;
 	border:2px solid #ccc;
 	border-radius:25px;
 	outline:none;
-	background:#ccc;
+	background:#303030;
 	font-family:Courier;
 }
 .WhiteBox .login input:hover{
@@ -81,7 +81,7 @@ background:green;
 }
 .WhiteBox .login input[type="submit"]:hover{
 border:2px solid #800000;
-background:#800000;
+background:#191991;
 }
 .first img{
 padding-top:150px;
@@ -100,10 +100,10 @@ padding-left:80px;
 		</div>
 
 		<div class="login">
-			<h2>Log In</h2>
+			<h2>LOG IN</h2>
 			<form method="post">
 {#				<div>#}
-{#				<input type="text" name="" placeholder="Usename">#}
+{#				<input type="text" name="" placeholder="Username">#}
 {#				</div>#}
 {#				<div>#}
 {#				<input type="password" name="" placeholder="Password">#}
@@ -113,7 +113,7 @@ padding-left:80px;
                 {% csrf_token %}
                 {{ form.as_p }}
 
-				<input type="submit" name="" value = "Log In">
+				<input type="submit" name="" value = "Log In" style="width: 50%;">
 				</div>
 			</form>
 

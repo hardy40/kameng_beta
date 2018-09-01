@@ -8,20 +8,22 @@
     {% block content %}
     <div class="comMainDiv">
 
-        <br><br><br>
-        <h3 style="color: #676767; margin-left: 44%;"> Complaints </h3>
+        <br><br><br><br>
+        <h3 style="color: #676767; margin-left: 44%;"> COMPLAINTS </h3>
+        <br><br>
         {% for complaint in c_list %}
         <section class="complaintSection">
             <div class="complaintStyle">Complaint : </div>
             {{ complaint.complaintText }}<br><br>
-            <div class="complaintStyle">Type Of Complaint :</div>{{ complaint.type_of_complaint }}<br><br>
+{#            <div class="complaintStyle">Type Of Complaint :</div>{{ complaint.type_of_complaint }}<br><br>#}
             <div class="complaintStyle">Status :</div>
                 {% if complaint.is_resolved_stud %}
                     Complaint Solved!
                 {% else %}
                     Under Progress
                 {% endif %}
-            <div class="complaintStyle"> Complaint Bye :- {{ complaint.u.user.first_name }}  {{ complaint.u.user.last_name }}</div>
+            <br><br>
+            <div class="complaintStyle"> Complaint By :</div> {{ complaint.u.user.first_name }}  {{ complaint.u.user.last_name }}
         </section>
         {% endfor %}
         </div>

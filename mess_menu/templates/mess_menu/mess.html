@@ -102,32 +102,38 @@
 {#		</div>#}
             <div>
                 <form action="submitted/" method="post">
-				<table style="width: 100%">
-                  <tr>
+				<table style="width: 100%"  class="messTable">
+                  <tr class="messTableHeadRow">
                         <th></th>
                         {% for t in time_list %}
-                        <th>
+                        <th class="messTableHeadData">
                             {{ t }}
                         </th>
                         {% endfor %}
                   </tr>
                     {% for d in day_list %}
                         <tr>
-                                <td>
+                                <td class="messDay">
                                     {{ d }}
                                 </td>
-
                         {% for t in time_list %}
-                                <td>
+                                <td class="messOption">
                             {% for m in menu_obj_list %}
                                 {% if m.day == d and m.time == t %}
 
-                                    <select name="{{ m }}">
+
+
+                                    <div class="messItem">
+
+                                    Item :
+
+                                    </div>
+                                    <select name="{{ m }}"  class="messDropdown">
                                         {% for o in m.options.all %}
                                             <option value="{{ o.value }}">{{o}}</option>
                                         {% endfor %}
                                     </select>
-                                    <br>
+                                    <br><br>
                                 {% endif %}
                             {% endfor %}
                                 </td>
@@ -142,11 +148,6 @@
 				</div>
 			</form>
 		</div>
-
-
-
-
-
 
 </body>
 </html>
