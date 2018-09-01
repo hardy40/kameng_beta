@@ -1,11 +1,11 @@
 html,body{
-    margin : 0px;
+    margin : 0;
     background-color: #1A1A1D;
 }
 .complaintSection{
-    margin-right 10px;
+    margin-right: 10px;
     background-color: #1A1A1D;
-    padding : 50px 90px;
+    /*padding : 50px 90px;*/
     color:#88BDBC;
     border:2px solid black;
     padding:30px;
@@ -15,7 +15,7 @@ html,body{
 .compForm{
     background-color: #1A1A1D;
     margin-top:100px;
-    margin-left 100px;
+    margin-left: 100px;
 
 }
 .complaintBox ,.typeOfComp{
@@ -26,7 +26,7 @@ html,body{
 
 .complaintBox{
     margin-left:80px;
-    font-size:40px;
+    font-size:20px;
 }
 
 .typeOfComp{
@@ -40,7 +40,7 @@ html,body{
     text-align:top;
     margin-left : 80px;
     font-style:italic;
-    font-size:16px;
+    font-size:14px;
     background-color:#303030;
     border:none;
     padding:10px;
@@ -65,4 +65,9 @@ html,body{
 
 .comMainDiv{
     background-color:#1A1A1D;
+}
+
+.complaintStyle{
+    font-size: 16px;
+    color: DodgerBlue;
 }

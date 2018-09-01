@@ -15,7 +15,10 @@ class KamengitesOrg(models.Model):
 class Secy(models.Model):
     secy = models.OneToOneField(KamengitesOrg, primary_key=True, on_delete=None)
     position = models.CharField(max_length=30)
+    profile_pic = models.ImageField(upload_to="profile", blank=True)
+    logos = models.ImageField(upload_to="secy_logos", blank=True)
 
     def __str__(self):
         return self.position
+
 

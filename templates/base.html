@@ -33,12 +33,18 @@
                         <li><a href="/facility">Facilities</a></li>
                         <li><a href="/complaints">Complaints</a></li>
                         <li><a href="/events">Events</a></li>
+                        <li><a href="/mess">Mess</a></li>
                         {% for s in secy_list %}
                             {% if user == s.secy.user %}
                                 <li><a href="/complaints/check">Check</a></li>
                                 <li><a href="/events/add">Post</a></li>
                            {% endif %}
                         {% endfor %}
+                        {% if user.is_authenticated %}
+                            <li><a href="/logout">Logout</a></li>
+                        {% else %}
+                            <li><a href="/login">Login</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
