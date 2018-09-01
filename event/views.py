@@ -5,22 +5,25 @@ from .models import Event
 
 def posts(request):
     post_list = Event.objects.all()
-    context = {'post_list': post_list}
+    secy_list = Secy.objects.all()
+    context = {'post_list': post_list, 'secy_list': secy_list}
     return render(request, 'event/event.html', context)
 
 
 def add(request):
     if request.user.is_authenticated:
         secys = Secy.objects.all()
+        context = {'secy_list': secys}
         p = Event()
         for s in secys:
             if s.secy.user == request.user:
                 if request.method == 'POST':
                     image = request.FILES.get('file')
                     p.img = image
+                    p.user = request.user
                     p.post = request.POST.get('txt')
                     p.save()
-                return render(request, 'event/post_event.html')
+                return render(request, 'event/post_event.html', context)
         return render(request, 'event/not_secy.html')
     return HttpResponseRedirect('/login')
 

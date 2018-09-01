@@ -14,12 +14,10 @@
 
            <div class="typeOfComp">
             Type Of Complaint:
-
-               <select name="toc" class="comSelect">
-                <option value="Sports">Sports</option>
-                <option value="Maintenance">Maintenance</option>
-                <option value="Cultural">Cultural</option>
-                <option value="Mess">Mess</option>
+            <select name="toc" class="comSelect">
+                {% for secy in secy_list %}
+                    <option value="{{ secy.position }}">{{ secy.position }}</option>
+                {% endfor %}
             </select>
            </div>
             <br>
@@ -36,21 +34,21 @@
         </form>
         </div>
         <br>
-        <!--<h3> Your Complaints </h3>-->
+        <h3 style="color: #676767; margin-left: 44%;"> My Complaints </h3>
         {% for complaint in complaints %}
         <section class="complaintSection">
-            <p>{{ complaint.complaintText }}</p>
-            <p>{{ complaint.type_of_complaint }}</p>
-            <p>
+            <div class="complaintStyle">Complaint : </div>
+            {{ complaint.complaintText }}<br><br>
+            <div class="complaintStyle">Type Of Complaint :</div>{{ complaint.type_of_complaint }}<br><br>
+            <div class="complaintStyle">Status :</div>
                 {% if complaint.is_resolved_stud %}
-                    <p>Complaint Solved!</p>
+                    Complaint Solved!
                 {% else %}
-                    <p>Under Progress</p>
+                    Under Progress
                 {% endif %}
-            </p>
+
         </section>
         {% endfor %} 
-        <a href="{% url 'logout' %}">logout</a>
         </div>
 
         {% endblock %}
