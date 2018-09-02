@@ -4,10 +4,12 @@ from .models import Event
 
 
 def posts(request):
-    post_list = Event.objects.all()
-    secy_list = Secy.objects.all()
-    context = {'post_list': post_list, 'secy_list': secy_list}
-    return render(request, 'event/event.html', context)
+    if request.user.is_authenticated:
+        post_list = Event.objects.all()
+        secy_list = Secy.objects.all()
+        context = {'post_list': post_list, 'secy_list': secy_list}
+        return render(request, 'event/event.html', context)
+    return HttpResponseRedirect('/login')
 
 
 def add(request):

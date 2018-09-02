@@ -18,7 +18,7 @@
 </head>
 
 
-<body>
+<body class="pageBgcolor">
     <div>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -27,17 +27,17 @@
                 </div>
                 <div style="float: right;">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/home">Home</a></li>
-                        <li><a href="/rooms">Rooms</a></li>
-                        <li><a href="/contact">Staff</a></li>
-                        <li><a href="/facility">Facilities</a></li>
-                        <li><a href="/complaints">Complaints</a></li>
-                        <li><a href="/events">Events</a></li>
-                        <li><a href="/mess">Mess</a></li>
+                        <li {% block home %}{% endblock %}><a href="/home">Home</a></li>
+                        <li {% block rooms %}{% endblock %}><a href="/rooms">Rooms</a></li>
+                        <li {% block contact %}{% endblock %}><a href="/contact">Staff</a></li>
+                        <li {% block facility %}{% endblock %}><a href="/facility">Facilities</a></li>
+                        <li {% block complaints %}{% endblock %}><a href="/complaints">Complaints</a></li>
+                        <li {% block events %}{% endblock %}><a href="/events">Events</a></li>
+                        <li {% block mess %}{% endblock %}><a href="/mess">Mess</a></li>
                         {% for s in secy_list %}
                             {% if user == s.secy.user %}
-                                <li><a href="/complaints/check">Check</a></li>
-                                <li><a href="/events/add">Post</a></li>
+                                <li {% block check %}{% endblock %}><a href="/complaints/check">Check</a></li>
+                                <li {% block post %}{% endblock %}><a href="/events/add">Post</a></li>
                            {% endif %}
                         {% endfor %}
                         {% if user.is_authenticated %}
@@ -53,4 +53,5 @@
     {% block content %}
     {% endblock %}
 </body>
+<div style="background-color: white;">abcd</div>
 </html>

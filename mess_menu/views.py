@@ -4,12 +4,13 @@ from .models import MessData, MenuObj, Option, Time, Day
 
 
 def mess_response(request):
+    secy_list = Secy.objects.all()
     if request.user.is_authenticated:
         menu_obj_list = MenuObj.objects.all()
         time_list = Time.objects.all()
         day_list = Day.objects.all()
         i = 0
-        context = {'menu_obj_list': menu_obj_list, 'time_list': time_list, 'day_list': day_list,'i':i}
+        context = {'menu_obj_list': menu_obj_list, 'time_list': time_list, 'day_list': day_list,'i':i, 'secy_list': secy_list}
         return render(request, 'mess_menu/mess.html', context)
     else:
         return HttpResponseRedirect('/login')

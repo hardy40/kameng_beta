@@ -3,7 +3,9 @@
     {% block include %}
                 {% include "head_complaints.html" %}
         {% endblock %}
-    <br><br><br><br>
+        {% block check %}
+            class="active"
+        {% endblock %}
 
     {% block content %}
     <div class="comMainDiv">

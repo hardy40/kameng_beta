@@ -1,74 +1,18 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-	<title>Room Allotment</title>
-    {% load static %}
-	<link rel="stylesheet" type="text/css" href="{% static '/rooms/stylingRoom.css' %}">
+{% block include %}
+    {% include "head_room.html" %}
+{% endblock %}
 
-{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
-{#        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
-{#        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
-{#        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
-</head>
+{% block rooms %}
+    class="active"
+{% endblock %}
 
-<body style="background-color: #676767 ; color: white ;">
+{% block content %}
+<br><br><br>
 
-{#    <nav class="navbar navbar-inverse navbar-fixed-top">#}
-{#        <div class="container-fluid">#}
-{#        <div class="navbar-header">#}
-{#          <a class="navbar-brand" href="/home" style="letter-spacing: 5px;">KAMENG HOSTEL</a>#}
-{#        </div>#}
-{#        <div style="float: right;">#}
-{#            <ul class="nav navbar-nav">#}
-{#              <li class="active"><a href="/home">Home</a></li>#}
-{#              <li><a href="/rooms">Rooms</a></li>#}
-{#              <li><a href="/contact">Staff</a></li>#}
-{#              <li><a href="/facility">Facilities</a></li>#}
-{#            </ul>#}
-{#        </div>#}
-{#      </div>#}
-{#    </nav>#}
+<object data="/media/files/book.pdf" type="application/pdf" style="width:60%; height:550px; margin-left: 20%;">
+    <p>Alternative text - include a link <a href="/media/files/book.pdf">to the PDF!</a></p>
+</object>
 
-	{% block content %}
-		<div class="headingRoom">
-            <a href="/rooms">Room allotment list</a>
-		</div>
-
-        <form action="" method="post" style="margin-left: 270px; margin-bottom: 50px; margin-top: 50px;">
-            {% csrf_token %}
-			<input type="text" name="Name" placeholder="Name">
-			<input type="text" name="Roll" style="margin-left: 30px;" placeholder="Roll No">
-			<input type="text" name="Room" style="margin-left: 30px;" placeholder="Room No">
-			<input type="submit" value="Search">
-		</form>
-
-{#        <form action="add/" method="post" style="margin-left: 270px; margin-bottom: 50px; margin-top: 50px;">#}
-{#            {% csrf_token %}#}
-{#			<input type="text" name="Name" placeholder="Name">#}
-{#			<input type="text" name="Roll" style="margin-left: 30px;" placeholder="Roll No">#}
-{#			<input type="text" name="Room" style="margin-left: 30px;" placeholder="Room No">#}
-{#			<input type="submit" value="Add">#}
-{#		</form>#}
-
-		<div class="tableRoom">
-			<table align="center">
-				<tr id="table-head">
-					<th align="left" style="padding-left: 80px;">Name</th>
-					<th>Roll No.</th>
-					<th>Room Alloted</th>
-				</tr>
-
-				{% for kamengite in kamengites %}
-					<tr id="row">
-						<td style="text-align: left; padding-left: 10px;">{{ kamengite.user.first_name}}   {{ kamengite.user.last_name }}</td>
-						<td>{{ kamengite.roll }}</td>
-						<td>{{ kamengite.room }}</td>
-					</tr>
-				{% endfor %}
-			</table>
-		</div>
-	{% endblock %}
-</body>
-
-</html>
+{% endblock %}

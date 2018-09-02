@@ -4,6 +4,12 @@
     float: left;
 }
 
+.pageBgcolor{
+    width: 100%;
+    height: 100%;
+    background-color: #676767;
+}
+
 .flip-container:hover .flipper, .flip-container.hover .flipper {
     transform: rotateY(180deg);
 }

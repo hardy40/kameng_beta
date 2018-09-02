@@ -1,108 +1,11 @@
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#    <title>Title</title>#}
-{#</head>#}
-{#<body>#}
-{#    <form action="submitted/" method="post">#}
-{#            {% csrf_token %}#}
-{#            {% block content %}#}
-{#           <div class="typeOfComp">#}
-{##}
-{#                {% for m in menu_obj_list %}#}
-{#                    {{m}}#}
-{#               <select name="{{ m }}" class="comSelect">#}
-{#                   {% for o in m.options.all %}#}
-{#                        <option value={{o.value}}>{{o.value}}</option>#}
-{#                   {% endfor %}#}
-{#               </select>#}
-{##}
-{##}
-{#                {% endfor %}#}
-{##}
-{#           </div>#}
-{#            {% endblock %}#}
-{##}
-{#            <input class="comSubmit" type="submit" value="Submit">#}
-{#        </form>#}
-{#</body>#}
-{#</html>#}
-{#<!DOCTYPE html>#}
-{#<html>#}
-{#<head>#}
-{#	<title>MESS MENU</title>#}
-{#    {% load static %}#}
-{#	<link rel="stylesheet" href="{% static '/mess_menu/style.css'  %}">#}
-{#</head>#}
-{#<body>#}
     {% extends "base.html" %}
-    {% block content %}
     {% block include %}
         {% include "head_mess_menu.html" %}
     {% endblock %}
-        {#	    <!-- {% load static %} -->#}
-{#			<form action="submitted/" method="post">#}
-{#				<table class="messTable">#}
-{#                    {% for t in time_list %}#}
-{#                    <tr class="messTableHeadRow">#}
-{#					<th></th>#}
-{##}
-{#					<th class="messTableHeadData">#}
-{#						{{ t }}#}
-{#					</th>#}
-{#					</tr>#}
-{#                        {% for d in day_list %}#}
-{#                            <td class="messDay">#}
-{#                            {{ d }}#}
-{#                            </td>#}
-{#                            <td class="messOption">#}
-{#                            {% for m in menu_obj_list %}#}
-{#                                {% if m.day == d and m.time == t %}#}
-{##}
-{#                                    <div class="messItem">#}
-{#                                    Item 1 :#}
-{#                                    </div>#}
-{##}
-{#                                    <select name="{{ m }}" class="messDropdown">#}
-{#                                        {% for o in m.options.all %}#}
-{#                                            <option value="{{ o.value }}">{{o}}</option>#}
-{#                                        {% endfor %}#}
-{#                                    </select>#}
-{#                                    </td>#}
-{#                                {% endif %}#}
-{#                            {% endfor %}#}
-{#                        {% endfor %}#}
-{#                    {% endfor %}#}
-{#					<br><br>#}
-{#					<div class="messItem">#}
-{#					Item 2 :#}
-{#					</div>#}
-{#					<select class="messDropdown">#}
-{#					    <option value="x">--None--</option>#}
-{#					    <option value="{{ i }}">option</option>#}
-{##}
-{#					</select>#}
-{#					<br><br>#}
-{#					<div class="messItem">#}
-{#					Item 3 :#}
-{#					</div>#}
-{#					<select class="messDropdown">#}
-{#					    <option value="x">--None--</option>#}
-{##}
-{##}
-{#					    <option value="{{ i }}">option</option>#}
-{##}
-{#					</select>#}
-{#				</td>#}
-{##}
-{#				</tr>#}
-{#				</table>#}
-{#				<div class="messButtonDiv">#}
-{#					<input type="submit" name="submit" class="messButton">#}
-{#				</div>#}
-{#			</form>#}
-{#		</div>#}
+    {% block mess %}
+            class="active"
+    {% endblock %}
+    {% block content %}
         <br><br><br>
             <div style="background-color: #2B7A78;">
                 <form action="submitted/" method="post">
