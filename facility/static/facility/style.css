@@ -3,7 +3,6 @@ body, html {
     margin: 0%;
 }
 
-
 .img{
    height: 100%;
     width: 100%;
@@ -59,6 +58,7 @@ body, html {
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
+    text-decoration: none;
     background-color: rgba(0, 0, 0, 0.8);
   }
   
