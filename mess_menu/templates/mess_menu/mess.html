@@ -28,17 +28,20 @@
 {#        </form>#}
 {#</body>#}
 {#</html>#}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>MESS MENU</title>
-    {% load static %}
-	<link rel="stylesheet" href="{% static '/mess_menu/style.css'  %}">
-</head>
-<body>
-{#	 {% extends base.html %} -->#}
-{#	<!-- {% block content %} -->#}
-{#	    <!-- {% load static %} -->#}
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title>MESS MENU</title>#}
+{#    {% load static %}#}
+{#	<link rel="stylesheet" href="{% static '/mess_menu/style.css'  %}">#}
+{#</head>#}
+{#<body>#}
+    {% extends "base.html" %}
+    {% block content %}
+    {% block include %}
+        {% include "head_mess_menu.html" %}
+    {% endblock %}
+        {#	    <!-- {% load static %} -->#}
 {#			<form action="submitted/" method="post">#}
 {#				<table class="messTable">#}
 {#                    {% for t in time_list %}#}
@@ -100,7 +103,8 @@
 {#				</div>#}
 {#			</form>#}
 {#		</div>#}
-            <div>
+        <br><br><br>
+            <div style="background-color: #2B7A78;">
                 <form action="submitted/" method="post">
 				<table style="width: 100%"  class="messTable">
                   <tr class="messTableHeadRow">
@@ -144,15 +148,16 @@
 
 
 				<div class="messButtonDiv">
-					<input type="submit" name="submit" class="messButton">
+					<input type="submit" name="submit" class="messButton" value="SUBMIT">
 				</div>
 			</form>
 		</div>
-
-</body>
-</html>
-
-
+{% endblock %}
+{##}
+{#</body>#}
+{#</html>#}
+{##}
+{##}
 
 
 
