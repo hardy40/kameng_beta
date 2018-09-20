@@ -17,10 +17,11 @@
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                     <div class="flipper">
                         <div class="front">
-                            <p class="name">
+
+                            <img src="{{ s.profile_pic.url}}" width="100%" height ="100%">
+                            <p class="name" style="text-align: -moz-center;margin-top: -130%">
                                 {{ s.secy.user.first_name }} {{ s.secy.user.last_name }}
                             </p>
-                            <img style="margin-left:110px" src="{{ s.profile_pic.url}}" width=80px>
                         </div>
 
                         <div class="back">
