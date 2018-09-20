@@ -1,13 +1,13 @@
-    {% extends "base.html" %}
+
+{% extends "base.html" %}
     {% block include %}
         {% include "head_mess_menu.html" %}
     {% endblock %}
     {% block mess %}
-            class="active"
     {% endblock %}
     {% block content %}
             <div style="background-color: #2B7A78; margin-top: 60px;">
-                <form action="submitted/" method="post">
+                    <h2 style="margin-left: 44%"> Current Vote Tally</h2>
 				<table style="width: 100%"  class="messTable">
                   <tr class="messTableHeadRow">
                         <th></th>
@@ -30,15 +30,12 @@
 
 
                                     <div class="messItem">
-
-                                    Item :
-
                                     </div>
-                                    <select name="{{ m }}"  class="messDropdown">
+
                                         {% for o in m.options.all %}
-                                            <option value="{{ o.value }}">{{o}}</option>
+                                            <p> {{ o }}  :-   {{ o.count }}</p>
                                         {% endfor %}
-                                    </select>
+
                                     <br><br>
                                 {% endif %}
                             {% endfor %}
@@ -50,10 +47,7 @@
 
 
 				<div class="messButtonDiv">
-                    {% csrf_token %}
-					<input type="submit" name="submit" class="messButton" value="SUBMIT">
 				</div>
-			</form>
 		</div>
         <div style="height: 100px; width: 100%;"></div>
 {% endblock %}
