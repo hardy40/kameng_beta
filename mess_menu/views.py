@@ -11,10 +11,18 @@ def mess_response(request):
             time_list = Time.objects.all()
             day_list = Day.objects.all()
             i = 0
-            context = {'menu_obj_list': menu_obj_list, 'time_list': time_list, 'day_list': day_list,'i':i, 'secy_list': secy_list}
+            context = {'menu_obj_list': menu_obj_list, 'time_list': time_list,
+                       'day_list': day_list, 'i': i, 'secy_list': secy_list}
             return render(request, 'mess_menu/mess.html', context)
         else:
             return render(request, 'mess_menu/Submitted.html')
+            # menu_obj_list = MenuObj.objects.all()
+            # time_list = Time.objects.all()
+            # day_list = Day.objects.all()
+            # i = 0
+            # context = {'menu_obj_list': menu_obj_list, 'time_list': time_list,
+            #            'day_list': day_list, 'i': i, 'secy_list': secy_list}
+            # return render(request, 'mess_menu/mess.html', context)
     else:
         return HttpResponseRedirect('/login')
 
@@ -30,8 +38,18 @@ def submitted(request):
             r.s += str(request.POST.get(str(obj)))
             for o in obj.options.all():
                 if str(o.value) == str(request.POST.get(str(obj))):
-                    print(1)
                     o.count = o.count + 1
                     o.save()
         r.save()
         return render(request, 'mess_menu/Submitted.html')
+
+
+def vote(request):
+    menu_obj_list = MenuObj.objects.all()
+    time_list = Time.objects.all()
+    day_list = Day.objects.all()
+    i = 0
+    context = {'menu_obj_list': menu_obj_list, 'time_list': time_list,
+               'day_list': day_list}
+    return render(request, 'mess_menu/Vote.html', context)
+

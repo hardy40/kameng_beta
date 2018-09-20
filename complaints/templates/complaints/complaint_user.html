@@ -49,7 +49,11 @@
                 {% else %}
                     Under Progress
                 {% endif %}
-
+        <form action="delete/" method="post">
+            {% csrf_token %}
+            <input style = "display: none" type="text" value="{{ complaint.pk }}"  name = "d">
+            <input class="comSubmit" type="submit" value="Delete">
+        </form>
         </section>
         {% endfor %} 
         </div>

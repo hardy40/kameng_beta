@@ -38,3 +38,11 @@ def secy_complaint(request):
             c_list = Complaint.objects.filter(type_of_complaint=s.position)[::-1]
             context = {'c_list': c_list, 'secy_list': secy_list}
             return render(request, 'complaints/check.html', context)
+
+
+def delete(request):
+    if request.method == 'POST':
+        ct = request.POST.get('d')
+        c = Complaint.objects.filter(pk=ct)
+        c.delete()
+        return HttpResponseRedirect('/complaints')
