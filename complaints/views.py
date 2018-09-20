@@ -6,7 +6,7 @@ from accounts.models import KamengitesOrg, Secy
 def complaint(request):
     if request.user.is_authenticated:
         k = KamengitesOrg.objects.filter(user=request.user)
-        complaints = Complaint.objects.filter(u=k[0])
+        complaints = Complaint.objects.filter(u=k[0])[::-1]
         secy_list = Secy.objects.all()
         context = {'complaints': complaints, 'secy_list': secy_list}
         return render(request, 'complaints/complaint_user.html', context)
@@ -35,6 +35,6 @@ def secy_complaint(request):
     secy_list = Secy.objects.all()
     for s in secy_list:
         if s.secy.user == request.user:
-            c_list = Complaint.objects.filter(type_of_complaint=s.position)
+            c_list = Complaint.objects.filter(type_of_complaint=s.position)[::-1]
             context = {'c_list': c_list, 'secy_list': secy_list}
             return render(request, 'complaints/check.html', context)
