@@ -102,18 +102,12 @@ padding-left:80px;
 		<div class="login">
 			<h2>LOG IN</h2>
 			<form method="post">
-{#				<div>#}
-{#				<input type="text" name="" placeholder="Username">#}
-{#				</div>#}
-{#				<div>#}
-{#				<input type="password" name="" placeholder="Password">#}
-{#				</div>#}
-{#				<div>#}
 
                 {% csrf_token %}
                 {{ form.as_p }}
 
-				<input type="submit" name="" value = "Log In" style="width: 50%;">
+				<input type="submit" name="" value = "Log In" style="width: 77%;">
+                <p style="color: darkslategray;margin-left: 10%">Not a member? <a style="color: goldenrod ;text-decoration: none" href="/signup">Sign up</a></p>
 				</div>
 			</form>
 

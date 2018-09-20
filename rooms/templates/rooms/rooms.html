@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+
+
 {% block include %}
     {% include "head_room.html" %}
 {% endblock %}
@@ -11,8 +13,11 @@
 {% block content %}
 <br><br><br>
 
-<object data="/media/files/book.pdf" type="application/pdf" style="width:60%; height:550px; margin-left: 20%;">
+<div style="height: 100%; width: 50%; margin-left: 25%;">
+<object data="/media/files/book.pdf" type="application/pdf" style="height: 100%; width: 100%;">
     <p>Alternative text - include a link <a href="/media/files/book.pdf">to the PDF!</a></p>
 </object>
+</div>
+    <br><br><br>
 
 {% endblock %}

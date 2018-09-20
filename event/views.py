@@ -5,7 +5,7 @@ from .models import Event
 
 def posts(request):
     if request.user.is_authenticated:
-        post_list = Event.objects.all()
+        post_list = Event.objects.all()[::-1]
         secy_list = Secy.objects.all()
         context = {'post_list': post_list, 'secy_list': secy_list}
         return render(request, 'event/event.html', context)

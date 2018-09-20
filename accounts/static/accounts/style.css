@@ -19,8 +19,8 @@ a,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50rem;
-  height: 30rem;
+  width: 73rem;
+  height: 40rem;
   border-radius: 0.1875rem;
   box-shadow: 0px 0.1875rem 0.4375rem rgba(0, 0, 0, 0.25);
 }
@@ -43,8 +43,6 @@ a,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /*{#background: url(http://ultraimg.com/images/spectre-login.jpg);#}*/
-  /*background-repeat: no-repeat;*/
   background-position: top center;
   background-size: cover;
 }
@@ -57,9 +55,7 @@ a,
 .thumbnail__logo {
   align-self: flex-start;
 }
-/*{#.logo__shape {#}*/
-/*{#  fill: #fff;#}*/
-/*{#}#}*/
+
 .logo__text {
   display: inline-block;
   font-size: .8rem;

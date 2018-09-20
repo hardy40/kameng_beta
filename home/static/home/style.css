@@ -29,29 +29,6 @@ body, html{
 }
 
 
-
-/*.drop{*/
-	/*margin-top:20px;*/
-	/*margin-left:20px;*/
-	/*background:transparent;*/
-	/*border:transparent;*/
-	/*border-radius:5px;*/
-	/*position:relative;*/
-	/*display:inline-box;*/
-/*}*/
-
-/*.drop:hover ul li{*/
-	/*display:block;*/
-	/**/
-/*}*/
-
-/*ul li {*/
-	/*display:none;*/
-	/**/
-	/**/
-/*}*/
-
-
 .sectionHome{
     text-align: center;
     background-color: #282e34;
@@ -61,7 +38,7 @@ body, html{
 .ptxt{
     position: absolute;
     
-    top:38%;
+    top:33%;
     
     width:100%;
     text-align: center;
