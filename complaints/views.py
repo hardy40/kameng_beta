@@ -46,3 +46,18 @@ def delete(request):
         c = Complaint.objects.filter(pk=ct)
         c.delete()
         return HttpResponseRedirect('/complaints')
+
+
+def resolved(request):
+    if request.method == 'POST':
+
+        ct = request.POST.get('d')
+        c = Complaint.objects.filter(pk=ct)
+
+        t = c[0]
+        t.is_resolved_ct = True
+        t.is_resolved_stud = True
+
+        t.save()
+
+        return HttpResponseRedirect('/complaints/check')

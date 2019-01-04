@@ -3,10 +3,14 @@
     class="active"
 {% endblock %}
 {% block content %}
-
+<style>
+    .pageBgcolor{
+        background-color: #1A1A1D
+    }
+</style>
     <div style="background-color: #808080">
     <br><br><br><br><br>
-    {% for post in post_list %}
+    {% for post in numbers %}
     <div style="width: 40% ; margin-left: 30%; margin-right: 30%; border: 2px solid black; padding: 5px; background-color: whitesmoke" >
         <p style="padding: 2px; margin: 0">Posted by <strong>{{ post.user.first_name }} {{ post.user.last_name }}</strong></p>
         <hr style="margin-top: 0; padding: 0; margin-bottom: 5px; height: 2px; background-color: black;">
@@ -19,4 +23,10 @@
     </div><br><br>
     {% endfor %}
         </div>
+    <div style="padding: 3%">
+
+        {% if val %}
+            <a style="color: antiquewhite;padding-left: 45%" href="?page={{ numbers1.next_page_number }}">MORE POSTS</a>
+        {% endif %}
+    </div>
 {% endblock %}
