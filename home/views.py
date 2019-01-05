@@ -2,6 +2,7 @@ from django.shortcuts import render
 from accounts.models import Secy
 
 
+
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR', None)
     if x_forwarded_for:
@@ -17,6 +18,9 @@ def home(request):
     context = {'secy_list': secy_list}
     print(get_client_ip(request))
     return render(request, 'home/home.html', context)
+
+def importantlinks(request):
+    return render(request, 'home/downloads.html')
 
 
 

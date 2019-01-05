@@ -5,12 +5,12 @@
 
 {% block content %}
     <br><br><br>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form   style="margin-left: 30%;margin-top: 5% " action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
-        <textarea rows="4" cols="50" name="txt"></textarea>
-        <input type="file" name="file">
-        <input type="submit" value="Submit">
+        <textarea  style="height: 200px;width: 500px" rows="4" cols="50" name="txt"></textarea>
+        <input style="margin-left: 30%" type="file" name="file">
+        <input style="margin-left: 42%" type="submit" value="Submit">
     </form>
     <div style="margin-top: 21%">
 
