@@ -27,6 +27,15 @@ def signup_add(request):
 
 
 def signup(request):
-    return render(request, "accounts/signup.html")
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR', None)
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    if str(ip[0:4]) == "10.9":
+        return render(request, "accounts/signup.html")
+    else:
+        return render(request, "accounts/not_match.html")
+    # return render(request, "accounts/signup.html")
 
 

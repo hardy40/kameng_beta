@@ -24,8 +24,14 @@
                 {% else %}
                     Under Progress
                 {% endif %}
+
             <br><br>
             <div class="complaintStyle"> Complaint By :</div> {{ complaint.u.user.first_name }}  {{ complaint.u.user.last_name }}
+            <form action="resolved/" method="post">
+                    {% csrf_token %}
+                    <input style = "display: none" type="text" value="{{ complaint.pk }}"  name = "d">
+                    <input class="comSubmit" type="submit" value="Resolved">
+                </form>
         </section>
         {% endfor %}
         </div>

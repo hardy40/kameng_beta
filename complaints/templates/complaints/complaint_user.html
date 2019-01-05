@@ -44,7 +44,7 @@
             {{ complaint.complaintText }}<br><br>
             <div class="complaintStyle">Type Of Complaint :</div>{{ complaint.type_of_complaint }}<br><br>
             <div class="complaintStyle">Status :</div>
-                {% if complaint.is_resolved_stud %}
+                {% if complaint.is_resolved_ct == True %}
                     Complaint Solved!
                 {% else %}
                     Under Progress
