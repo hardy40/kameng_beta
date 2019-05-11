@@ -28,6 +28,7 @@ def mess_response(request):
 
 
 def submitted(request):
+    secy_list = Secy.objects.all()
     if request.method == "POST":
         r = MessData()
         menu_obj_list = MenuObj.objects.all()
@@ -41,15 +42,16 @@ def submitted(request):
                     o.count = o.count + 1
                     o.save()
         r.save()
-        return render(request, 'mess_menu/Submitted.html')
+        return render(request, 'mess_menu/Submitted.html', {'secy_list': secy_list})
 
 
 def vote(request):
+    secy_list = Secy.objects.all()
     menu_obj_list = MenuObj.objects.all()
     time_list = Time.objects.all()
     day_list = Day.objects.all()
     i = 0
     context = {'menu_obj_list': menu_obj_list, 'time_list': time_list,
                'day_list': day_list}
-    return render(request, 'mess_menu/Vote.html', context)
+    return render(request, 'mess_menu/Vote.html', context, {'secy_list': secy_list})
 

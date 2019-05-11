@@ -2,37 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="802f596b-7b9d-4166-a4b8-cd91125ad0bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/kameng_beta.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kameng_beta.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/static/accounts/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/complaints/static/complaints/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-Cultural.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-General.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-Literary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-Maintenance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-Mess.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-Sports.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-Technical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-Welfare.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/logos/logo-facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/static/contact/styling.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/static/facility/images/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/static/facility/images/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/static/facility/images/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/static/facility/images/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/static/facility/images/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/static/facility/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/static/facility/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/home/images/icon_menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/home/images/img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/home/images/night.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/home/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kameng/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kameng/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mess_menu/static/mess_menu/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rooms/static/rooms/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mess_menu/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mess_menu/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,46 +39,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kameng/urls.py">
+        <entry file="file://$PROJECT_DIR$/home/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="255">
+              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding>
-                <element signature="e#630#662#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kameng/settings.py">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="168" column="24" lean-forward="true" selection-start-line="168" selection-start-column="24" selection-end-line="168" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/rooms/style.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/mess_menu/style.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/complaints/style.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/accounts/style.css">
+        <entry file="file://$PROJECT_DIR$/accounts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="288">
+              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,7 +119,6 @@
         <option value="$PROJECT_DIR$/mess_menu/templates/mess_menu/mess.html" />
         <option value="$PROJECT_DIR$/mess_menu/templates/mess_menu/Vote.html" />
         <option value="$PROJECT_DIR$/mess_menu/templates/mess_menu/Submitted.html" />
-        <option value="$PROJECT_DIR$/mess_menu/views.py" />
         <option value="$PROJECT_DIR$/mess_menu/urls.py" />
         <option value="$PROJECT_DIR$/contact/templates/contact/contact.html" />
         <option value="$PROJECT_DIR$/facility/views.py" />
@@ -169,7 +129,6 @@
         <option value="$PROJECT_DIR$/complaints/templates/complaints/complaint_user.html" />
         <option value="$PROJECT_DIR$/complaints/views.py" />
         <option value="$PROJECT_DIR$/event/templates/event/event.html" />
-        <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/signup.html" />
         <option value="$PROJECT_DIR$/event/templates/event/post_event.html" />
         <option value="$PROJECT_DIR$/kameng/templates/kameng/downloads.html" />
@@ -177,12 +136,14 @@
         <option value="$PROJECT_DIR$/kameng/views.py" />
         <option value="$PROJECT_DIR$/home/urls.py" />
         <option value="$PROJECT_DIR$/home/templates/home/downloads.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/home/views.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/not_match.html" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/kameng/urls.py" />
         <option value="$PROJECT_DIR$/kameng/settings.py" />
+        <option value="$PROJECT_DIR$/mess_menu/views.py" />
+        <option value="$PROJECT_DIR$/home/views.py" />
+        <option value="$PROJECT_DIR$/accounts/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -205,6 +166,21 @@
             <path>
               <item name="kameng_beta" type="b2602c69:ProjectViewProjectNode" />
               <item name="kameng_beta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kameng_beta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kameng_beta" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kameng_beta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kameng_beta" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kameng_beta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kameng_beta" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -330,7 +306,7 @@
       <workItem from="1556807361742" duration="767000" />
       <workItem from="1556815764174" duration="40000" />
       <workItem from="1557567515337" duration="2924000" />
-      <workItem from="1557572162250" duration="217000" />
+      <workItem from="1557572162250" duration="2606000" />
     </task>
     <servers />
   </component>
@@ -367,7 +343,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13556000" />
+    <option name="totallyTimeSpent" value="15945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -387,7 +363,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007576" side_tool="true" weight="0.3294702" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924242" weight="0.2644628" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924242" visible="true" weight="0.2644628" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -500,13 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mess_menu/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/complaints/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -558,16 +527,6 @@
     <entry file="file://$PROJECT_DIR$/kameng/templates/kameng/downloads.html" />
     <entry file="file://$PROJECT_DIR$/kameng/templates/downloads.html" />
     <entry file="file://$PROJECT_DIR$/kameng/views.py" />
-    <entry file="file://$PROJECT_DIR$/home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -613,16 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1590">
@@ -641,13 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2685">
-          <caret line="179" column="45" selection-start-line="179" selection-start-column="45" selection-end-line="179" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -721,8 +663,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kameng/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        <state relative-caret-position="135">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mess_menu/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="168" column="24" lean-forward="true" selection-start-line="168" selection-start-column="24" selection-end-line="168" selection-end-column="24" />
         </state>
       </provider>
     </entry>
